@@ -7,6 +7,10 @@ const cookies = new Cookies();
 
 const refreshInstance = axios.create({
   baseURL: window._env_.ALLURE_DOCKER_API_URL,
+  headers: {
+    'cf-access-client-id': window._env_.CF_ACCESS_CLIENT_ID,
+    'cf-access-client-secret': window._env_.CF_ACCESS_CLIENT_SECRET,
+  },
 });
 
 refreshInstance.interceptors.request.use(
@@ -27,6 +31,10 @@ refreshInstance.interceptors.request.use(
 
 const instance = axios.create({
   baseURL: window._env_.ALLURE_DOCKER_API_URL,
+  headers: {
+    'cf-access-client-id': window._env_.CF_ACCESS_CLIENT_ID,
+    'cf-access-client-secret': window._env_.CF_ACCESS_CLIENT_SECRET,
+  },
 });
 
 instance.interceptors.request.use(
