@@ -15,13 +15,11 @@ const refreshInstance = axios.create({
 
 refreshInstance.interceptors.request.use(
   function (config) {
-    config.withCredentials = true;
-
+    config.withCredentials = false;
     const csrf = cookies.get("csrf_refresh_token");
     if (csrf) {
       config.headers["X-CSRF-TOKEN"] = csrf;
     }
-
     return config;
   },
   function (error) {
@@ -39,7 +37,7 @@ const instance = axios.create({
 
 instance.interceptors.request.use(
   function (config) {
-    config.withCredentials = true;
+    config.withCredentials = false;
     if (!config.headers["X-CSRF-TOKEN"]) {
       const csrf = cookies.get("csrf_access_token");
       if (csrf) {
