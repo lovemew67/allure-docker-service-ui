@@ -7,17 +7,19 @@ const cookies = new Cookies();
 
 const refreshInstance = axios.create({
   baseURL: window._env_.ALLURE_DOCKER_API_URL,
+  headers: {
+    'cf-access-client-id': window._env_.CF_ACCESS_CLIENT_ID,
+    'cf-access-client-secret': window._env_.CF_ACCESS_CLIENT_SECRET,
+  },
 });
 
 refreshInstance.interceptors.request.use(
   function (config) {
-    config.withCredentials = true;
-
+    config.withCredentials = false;
     const csrf = cookies.get("csrf_refresh_token");
     if (csrf) {
       config.headers["X-CSRF-TOKEN"] = csrf;
     }
-
     return config;
   },
   function (error) {
@@ -27,11 +29,15 @@ refreshInstance.interceptors.request.use(
 
 const instance = axios.create({
   baseURL: window._env_.ALLURE_DOCKER_API_URL,
+  headers: {
+    'cf-access-client-id': window._env_.CF_ACCESS_CLIENT_ID,
+    'cf-access-client-secret': window._env_.CF_ACCESS_CLIENT_SECRET,
+  },
 });
 
 instance.interceptors.request.use(
   function (config) {
-    config.withCredentials = true;
+    config.withCredentials = false;
     if (!config.headers["X-CSRF-TOKEN"]) {
       const csrf = cookies.get("csrf_access_token");
       if (csrf) {

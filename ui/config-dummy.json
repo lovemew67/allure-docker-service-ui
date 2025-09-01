@@ -1,5 +1,7 @@
 {
   "version": "na",
   "prefix": "na",
-  "full_allure_docker_api_url": "http://nanananananana.com"
+  "full_allure_docker_api_url": "http://nanananananana.com",
+  "cf_access_client_id": "secret.access",
+  "cf_access_client_secret": "secret"
 }
