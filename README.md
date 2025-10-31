@@ -1,7 +1,3 @@
-[![](resources/allure.png)](http://allure.qatools.ru/)
-[![](resources/docker.png)](https://docs.docker.com/)
-[![](resources/reactjs.png)](https://reactjs.org/)
-
 # ALLURE-DOCKER-SERVICE UI
 [![](https://github.com/fescobar/allure-docker-service-ui/actions/workflows/docker-publish.yml/badge.svg?branch=master)](https://github.com/fescobar/allure-docker-service-ui/actions?query=branch%3Amaster)
 
@@ -28,9 +24,6 @@ Table of contents
 
 ## FEATURES
 Allure Docker Service UI provides a friendly user interface for [frankescobar/allure-docker-service](https://github.com/fescobar/allure-docker-service) API container.
-
-[![](resources/signin-allure-docker-service-ui.png)](resources/signin-allure-docker-service-ui.png)
-[![](resources/allure-docker-service-ui.png)](resources/allure-docker-service-ui.png)
 
 ### Docker Hub
 - Repository: [frankescobar/allure-docker-service-ui](https://hub.docker.com/r/frankescobar/allure-docker-service-ui/)
