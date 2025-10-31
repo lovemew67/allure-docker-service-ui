@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./app.css";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -111,7 +111,7 @@ class App extends Component {
             <Route
               path="/signin"
               render={() => (
-                <AllureDockerSigIn isLoginRequired={this.isLoginRequired}/>
+                <AllureDockerSigIn isLoginRequired={this.isLoginRequired} />
               )}
             />
             <Route render={() => <Redirect to="/signin" />} />
@@ -125,7 +125,7 @@ class App extends Component {
               <Route
                 path="/signin"
                 render={() => (
-                  <AllureDockerSigIn isLoginRequired={this.isLoginRequired} isHomeAnOption={!this.isSignInAnOption}/>
+                  <AllureDockerSigIn isLoginRequired={this.isLoginRequired} isHomeAnOption={!this.isSignInAnOption} />
                 )}
               />
             </React.Fragment>
