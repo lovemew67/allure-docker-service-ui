@@ -4,7 +4,7 @@
 ![](https://img.shields.io/docker/pulls/frankescobar/allure-docker-service-ui)
 
 Table of contents
-=================
+=================w
    * [FEATURES](#FEATURES)
       * [Docker Hub](#docker-hub)
       * [Docker Versions](#docker-versions)
